@@ -2,6 +2,7 @@
 
 from flask import Flask, request
 from dotenv import load_dotenv 
+import os
 
 load_dotenv()
 db_url = os.environ["DATABASE_URL"]
