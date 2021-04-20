@@ -16,7 +16,13 @@ import models
 @app.route("/")
 def home():
     return {"Status": "Success"}, 200 
+    
 
+@app.route("/notes")
+def show_notes():
+    result = models.Note.query.filter_by().all()
+    models.db.session.add(result)
+    models.db.session.commit()
 
 # Run the app in port 5000 and in debug mode
 if __name__ == '__main__':
