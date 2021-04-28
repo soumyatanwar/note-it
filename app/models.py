@@ -10,8 +10,8 @@ class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
     description = db.Column(db.Text, nullable=False)
-    created_on = db.Column(db.DateTime, nullable=False, default=datetime.utc)
-    updated_on = db.Column(db.DateTime, nullable=False, default=datetime.utc)
+    created_on = db.Column(db.DateTime, nullable=False, default=datetime.now())
+    updated_on = db.Column(db.DateTime, nullable=False, default=datetime.now())
     _is_done = db.Column(db.Boolean, nullable=False)
     _is_deleted = db.Column(db.Boolean, nullable=False)
     note_image = db.Column(db.LargeBinary, nullable=False)
@@ -19,7 +19,7 @@ class Note(db.Model):
     user = db.relationship('User', backref=db.backref('users', lazy=True))
     
 class User(db.Model):
-    username = db.Column(db.String(80), unique=True, nullable=False)
+    username = db.Column(db.String(80), primary_key=True, nullable=False)
     password = db.Column(db.String(8), nullable=False)
 
     def __repr__(self):
