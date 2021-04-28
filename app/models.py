@@ -30,7 +30,7 @@ class UserProfile(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     bio = db.Column(db.Text, unique=False, nullable=True)
     username = db.Column(db.Integer, db.ForeignKey('user.username'), nullable=False)
-    user = db.relationship('User', backref=db.backref('users', lazy=True))
+    user = db.relationship('User', backref=db.backref('user', lazy=True))
 
     def __repr__(self):
         return '<Profile %r>' % self.bio
