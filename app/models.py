@@ -26,6 +26,7 @@ class User(db.Model):
         return '<User %r>' % self.username
 
 class UserProfile(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     bio = db.Column(db.Text, unique=False, nullable=True)
     username = db.Column(db.Integer, db.ForeignKey('user.username'), nullable=False)
