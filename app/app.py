@@ -6,6 +6,7 @@ import os
 
 load_dotenv()
 db_url = os.environ["DATABASE_URL"]
+print(db_url)
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
@@ -30,10 +31,11 @@ def create_note():
 def show_notes():
     result = models.Note.query.filter_by().all()
     print(result)
+    models.db.session.add(result)
+    models.db.session.commit()
     return {"Status": "Success", "result": result}, 201
 
 # Run the app in port 5000 and in debug mode
 if __name__ == '__main__':
-    models.db.create_all()
     models.db.init_app(app)
     app.run(port=5000, debug=True)
