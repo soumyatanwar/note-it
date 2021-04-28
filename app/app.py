@@ -31,8 +31,8 @@ def create_note():
 def show_notes():
     result = models.Note.query.filter_by().all()
     print(result)
-    models.db.session.add(result)
-    models.db.session.commit()
+    # models.db.session.add(result)
+    # models.db.session.commit()
     return {"Status": "Success", "result": result}, 201
 
 # Run the app in port 5000 and in debug mode
