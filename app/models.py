@@ -34,3 +34,5 @@ class UserProfile(db.Model):
 
     def __repr__(self):
         return '<Profile %r>' % self.bio
+
+db.create_all()
