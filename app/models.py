@@ -9,7 +9,7 @@ class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
     description = db.Column(db.Text, nullable=False)
-    created_on = db.Column(db.DateTime, nullable=False, defautlt=datetime.utc)
+    created_on = db.Column(db.DateTime, nullable=False, default=datetime.utc)
     _is_done = db.Column(db.Boolean, nullable=False)
     _is_deleted = db.Column(db.Boolean, nullable=False)
     note_image = db.Column(db.LargeBinary, nullable=False)
