@@ -1,14 +1,6 @@
----- Remove this -----
+# Note It
 
-# Python-project-template
-
-Use this repo as a template to create your own python app
-
----- Remove this until here -----
-
-# Project Name
-
-Write a small description of your project
+'Note It' is a catchall home for my musings and notes across different platform 'Reading Lists'. It is to help me (and maybe others like me) connect dots and catchup on all those good old 'Saved for later' items!
 
 ## Feature list
 
