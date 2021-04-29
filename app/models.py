@@ -1,10 +1,8 @@
-from app import app
+from app import app, db
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import logging
 from datetime import datetime
-
-db = SQLAlchemy(app)
 
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -36,4 +34,3 @@ class UserProfile(db.Model):
         return '<Profile %r>' % self.bio
 
 # db.create_all() # should only create db once
-db.init_app(app)
