@@ -37,5 +37,4 @@ def show_notes():
 
 # Run the app in port 5000 and in debug mode
 if __name__ == '__main__':
-    models.db.init_app(app)
     app.run(port=5000, debug=True)
