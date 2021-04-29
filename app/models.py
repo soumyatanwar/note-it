@@ -35,4 +35,5 @@ class UserProfile(db.Model):
     def __repr__(self):
         return '<Profile %r>' % self.bio
 
-db.create_all()
+# db.create_all() # should only create db once
+db.init_app(app)
