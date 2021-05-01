@@ -24,11 +24,11 @@ def home():
 @app.route("/notes", methods=["POST"])
 def create_note():
     params = request.json
-    result = models.Note.create(**params)
+    result = models.Note(**params)
     print(result)
-    return {"Status": "Success", "result": result}, 201
-    # models.db.session.add(result)
-    # models.db.session.commit()
+    return {"Status": "Success", "result": params}, 201
+    db.session.add(result)
+    db.session.commit()
 
 @app.route("/notes")
 def show_notes():
