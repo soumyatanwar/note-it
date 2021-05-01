@@ -10,10 +10,10 @@ class Note(db.Model):
     description = db.Column(db.Text, nullable=False)
     created_on = db.Column(db.DateTime, nullable=False, default=datetime.now())
     updated_on = db.Column(db.DateTime, nullable=False, default=datetime.now())
-    _is_done = db.Column(db.Boolean, nullable=False)
-    _is_deleted = db.Column(db.Boolean, nullable=False)
+    _is_done = db.Column(db.Boolean, nullable=False, default = False)
+    _is_deleted = db.Column(db.Boolean, nullable=False, default = False)
     note_image = db.Column(db.LargeBinary, nullable=False)
-    created_user = db.Column(db.Integer, db.ForeignKey('user.username'), nullable=False)
+    created_user = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
     user = db.relationship('User', backref=db.backref('users', lazy=True))
     
 class User(db.Model):
