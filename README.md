@@ -26,7 +26,7 @@ Error:
 ## DB Design Diagram
 Explains relationship between 'Note' and the 'User' who 'owns' it along with the attributes of each entity
 
-![image](https://user-images.githubusercontent.com/37302163/117565773-b3227c80-b0d0-11eb-9b4f-e9727182da44.png)
+![image](https://user-images.githubusercontent.com/37302163/117566005-ddc10500-b0d1-11eb-9d8e-5d2b005ffa10.png)
 
 ## Coding Issues and Learning
 
