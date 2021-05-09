@@ -48,11 +48,11 @@ def show_notes():
         "id": note.id, 
         "title": note.title,
         "description":note.description, 
-        "created_on":note.created_on, 
-        "updated_on":note.updated_on, 
-        "_is_done":note._is_done, 
-        "_is_deleted":note._is_deleted,  
-        "note_image":note.note_image 
+        "created_on":note.created_on, # will not be modified under any circumstances
+        "updated_on":note.updated_on, # will be changed on any modification to note 
+        "_is_done":note._is_done, # needs to triggered based on a UI interaction
+        "_is_deleted":note._is_deleted, # soft delete, triggered by UI interaction
+        "note_image":note.note_image # optional addition
         }
         response.append(returned_note)
 
