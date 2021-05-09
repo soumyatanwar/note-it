@@ -24,6 +24,9 @@ Error:
 ```
 
 ## DB Design Diagram
+ER Diagrams for User and Note entities before addition of 'user ownership' concept in Note
+![image](https://user-images.githubusercontent.com/37302163/117565328-34c4db00-b0ce-11eb-8d82-9ae422743d21.png)
+![image](https://user-images.githubusercontent.com/37302163/117565340-41e1ca00-b0ce-11eb-9400-508ca4882391.png)
 
 
 ## Coding Issues and Learning
