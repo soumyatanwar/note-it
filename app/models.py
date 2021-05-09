@@ -13,8 +13,8 @@ class Note(db.Model):
     _is_done = db.Column(db.Boolean, nullable=False, default = False)
     _is_deleted = db.Column(db.Boolean, nullable=False, default = False)
     note_image = db.Column(db.LargeBinary, nullable=True)
-    created_user = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
-    user = db.relationship('User', backref=db.backref('users', lazy=True))
+    # created_user = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
+    # user = db.relationship('User', backref=db.backref('users', lazy=True))
     
 class User(db.Model):
     username = db.Column(db.String(80), primary_key=True, nullable=False)
